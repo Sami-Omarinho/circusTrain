@@ -1,0 +1,26 @@
+﻿<Window x:Class="CircusTrainWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CircusTrainWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1000" ResizeMode="NoResize">
+    <Grid>
+        <TextBox x:Name="AmountOfAnimals" HorizontalAlignment="Left" Margin="24,97,0,0" Text="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="AmountOfAnimals_TextChanged" PreviewTextInput="TextBox_PreviewTextInput"/>
+        <ComboBox x:Name="AnimalSizeComboBox" HorizontalAlignment="Left" Margin="24,70,0,0" VerticalAlignment="Top" Width="221" SelectionChanged="AnimalSizeComboBox_SelectionChanged">
+            <ComboBoxItem x:Name="Small">Small</ComboBoxItem>
+            <ComboBoxItem x:Name="Medium">Medium</ComboBoxItem>
+            <ComboBoxItem x:Name="Large">Large</ComboBoxItem>
+        </ComboBox>
+        <CheckBox x:Name="CarnivoreCheckbox" Content="Carnivore" HorizontalAlignment="Left" Margin="24,50,0,0" VerticalAlignment="Top" Checked="CarnivoreCheckbox_Checked" Unchecked="CarnivoreCheckbox_OnUnchecked" Width="206"/>
+        <TextBlock HorizontalAlignment="Left" Margin="88,31,0,0" Text="Add Animal" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <Button x:Name="AddAnimalButton" Content="Add Animal(s)" HorizontalAlignment="Left" Margin="24,120,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.303,-0.699" Width="221" Click="AddAnimalButton_Click"/>
+        <ListBox x:Name="ListBoxAnimals" Margin="24,170,750,10"/>
+        <Button x:Name="DistributeButton" Content="Distribute" Margin="250,71,0,0" Click="DistributeButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="740"/>
+        <TextBlock HorizontalAlignment="Left" Margin="449,31,0,0" Text="Distribute all Animals" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <ListBox x:Name="DistributeInfo" Margin="250,97,10,10"/>
+        <Button x:Name="ClearButton" Content="Clear Animals" HorizontalAlignment="Left" Margin="24,145,0,0" VerticalAlignment="Top" Width="221" Click="ClearButton_Click"/>
+
+    </Grid>
+</Window>
