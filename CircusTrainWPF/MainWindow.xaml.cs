@@ -93,11 +93,11 @@ namespace CircusTrainWPF
             var sb = new List<String>();
 
             sb.Add("\n--- Wagon Distribution ---\n");
-            sb.Add("Total Amount of wagons: " + distributor.Wagons.Count);
+            sb.Add("Total Amount of wagons: " + distributor.WagonList.Count);
             sb.Add("----------------------------------------------------\n");
-            for (var i = 0; i < distributor.Wagons.Count; i++)
+            for (var i = 0; i < distributor.WagonList.Count; i++)
             {
-                var wagon = distributor.Wagons[i];
+                var wagon = distributor.WagonList[i];
                 var animals = wagon.Animals.ToList();
                 sb.Add("Wagon " + (i + 1) + ":\n\n" + animals.Count + " animals\n");
                 for (var j = 0; j < animals.Count; j++)

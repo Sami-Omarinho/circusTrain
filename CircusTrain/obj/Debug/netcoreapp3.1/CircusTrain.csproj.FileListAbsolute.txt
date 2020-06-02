@@ -6,3 +6,11 @@ C:\xampp\htdocs\HBO\semester2project\CircusTrain-master\CircusTrain\obj\Debug\ne
 C:\xampp\htdocs\HBO\semester2project\CircusTrain-master\CircusTrain\obj\Debug\netcoreapp3.1\CircusTrain.AssemblyInfo.cs
 C:\xampp\htdocs\HBO\semester2project\CircusTrain-master\CircusTrain\obj\Debug\netcoreapp3.1\CircusTrain.dll
 C:\xampp\htdocs\HBO\semester2project\CircusTrain-master\CircusTrain\obj\Debug\netcoreapp3.1\CircusTrain.pdb
+C:\xampp\htdocs\HBO\semester2project\circusTrain\CircusTrain\bin\Debug\netcoreapp3.1\CircusTrain.deps.json
+C:\xampp\htdocs\HBO\semester2project\circusTrain\CircusTrain\bin\Debug\netcoreapp3.1\CircusTrain.dll
+C:\xampp\htdocs\HBO\semester2project\circusTrain\CircusTrain\bin\Debug\netcoreapp3.1\CircusTrain.pdb
+C:\xampp\htdocs\HBO\semester2project\circusTrain\CircusTrain\obj\Debug\netcoreapp3.1\CircusTrain.csprojAssemblyReference.cache
+C:\xampp\htdocs\HBO\semester2project\circusTrain\CircusTrain\obj\Debug\netcoreapp3.1\CircusTrain.AssemblyInfoInputs.cache
+C:\xampp\htdocs\HBO\semester2project\circusTrain\CircusTrain\obj\Debug\netcoreapp3.1\CircusTrain.AssemblyInfo.cs
+C:\xampp\htdocs\HBO\semester2project\circusTrain\CircusTrain\obj\Debug\netcoreapp3.1\CircusTrain.dll
+C:\xampp\htdocs\HBO\semester2project\circusTrain\CircusTrain\obj\Debug\netcoreapp3.1\CircusTrain.pdb

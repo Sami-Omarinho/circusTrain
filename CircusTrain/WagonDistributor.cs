@@ -23,20 +23,17 @@ namespace CircusTrain
         {
             foreach (var animal in _animalList)
             {
-                if (WagonList.Any(wagon => wagon.AddAnimal(animal))) continue;
+                if (WagonList.Any(wagon => wagon.AddAnimalToWagon(animal))) continue;
 
                 AddWagonWithAnimal(animal);
             }
         }
         
-        /// <summary>
-        /// Creates a new wagon and adds the animal to the newly created wagon.
-        /// </summary>
-        /// <param name="animal">The animal that needs a new wagon.</param>
+        // Creates a new wagon and adds the animal to the newly created wagon.
         private void AddWagonWithAnimal(Animal animal)
         {
             var newWagon = new Wagon();
-            newWagon.AddAnimal(animal);
+            newWagon.AddAnimalToWagon(animal);
             WagonList.Add(newWagon);
         }
     }

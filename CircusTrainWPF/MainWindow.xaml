@@ -7,20 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="1000" ResizeMode="NoResize">
     <Grid>
-        <TextBox x:Name="AmountOfAnimals" HorizontalAlignment="Left" Margin="24,97,0,0" Text="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="AmountOfAnimals_TextChanged" PreviewTextInput="TextBox_PreviewTextInput"/>
-        <ComboBox x:Name="AnimalSizeComboBox" HorizontalAlignment="Left" Margin="24,70,0,0" VerticalAlignment="Top" Width="221" SelectionChanged="AnimalSizeComboBox_SelectionChanged">
+        <TextBox x:Name="AmountOfAnimals" HorizontalAlignment="Left" Margin="25,0,10,468" Text="1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="167" TextChanged="AmountOfAnimals_TextChanged" PreviewTextInput="TextBox_PreviewTextInput"/>
+        <ComboBox x:Name="AnimalSizeComboBox" HorizontalAlignment="Left" Margin="217,0,10,422" VerticalAlignment="Bottom" Width="138" SelectionChanged="AnimalSizeComboBox_SelectionChanged">
             <ComboBoxItem x:Name="Small">Small</ComboBoxItem>
             <ComboBoxItem x:Name="Medium">Medium</ComboBoxItem>
             <ComboBoxItem x:Name="Large">Large</ComboBoxItem>
         </ComboBox>
-        <CheckBox x:Name="CarnivoreCheckbox" Content="Carnivore" HorizontalAlignment="Left" Margin="24,50,0,0" VerticalAlignment="Top" Checked="CarnivoreCheckbox_Checked" Unchecked="CarnivoreCheckbox_OnUnchecked" Width="206"/>
-        <TextBlock HorizontalAlignment="Left" Margin="88,31,0,0" Text="Add Animal" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-        <Button x:Name="AddAnimalButton" Content="Add Animal(s)" HorizontalAlignment="Left" Margin="24,120,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.303,-0.699" Width="221" Click="AddAnimalButton_Click"/>
-        <ListBox x:Name="ListBoxAnimals" Margin="24,170,750,10"/>
-        <Button x:Name="DistributeButton" Content="Distribute" Margin="250,71,0,0" Click="DistributeButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="740"/>
-        <TextBlock HorizontalAlignment="Left" Margin="449,31,0,0" Text="Distribute all Animals" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-        <ListBox x:Name="DistributeInfo" Margin="250,97,10,10"/>
-        <Button x:Name="ClearButton" Content="Clear Animals" HorizontalAlignment="Left" Margin="24,145,0,0" VerticalAlignment="Top" Width="221" Click="ClearButton_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="217,0,10,468" Text="Add Animal" TextWrapping="Wrap" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="14"/>
+        <Button x:Name="AddAnimalButton" Content="Add Animals" HorizontalAlignment="Left" Margin="25,0,10,444" VerticalAlignment="Bottom" RenderTransformOrigin="-0.303,-0.699" Width="167" Click="AddAnimalButton_Click"/>
+        <ListBox x:Name="ListBoxAnimals" Width="334" Height="400" Margin="23,0,0,10" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        <Button x:Name="DistributeButton" Content="Distribute" Margin="542,0,10,466" Height="20" Width="426" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="DistributeButton_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="392,0,10,468" Text="Distribute all Animals" TextWrapping="Wrap" VerticalAlignment="bottom" FontWeight="Bold" FontSize="14"/>
+        <ListBox x:Name="DistributeInfo" Width="576" Height="450" Margin="392,0,0,10" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        <Button x:Name="ClearButton" Content="Clear Animals" HorizontalAlignment="Left" Margin="25,0,10,419" VerticalAlignment="bottom" Width="167" Click="ClearButton_Click"/>
+        <GridSplitter Height="10" Margin="23,0,10,490" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="945"/>
+        <GridSplitter HorizontalAlignment="left" Margin="369,0,253,10" VerticalAlignment="Bottom" Width="10" Height="480"/>
+        <CheckBox x:Name="CarnivoreCheckbox" Content="Carnivore"  Height="16" Margin="217,0,10,448" Checked="CarnivoreCheckbox_Checked" Unchecked="CarnivoreCheckbox_OnUnchecked"  Width="102" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
 
     </Grid>
 </Window>
