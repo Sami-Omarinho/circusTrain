@@ -18,12 +18,12 @@ using System.Text.RegularExpressions;
 
 namespace CircusTrainWPF
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
+    // Interaction logic for MainWindow.xaml
+
     public partial class MainWindow : Window
     {
-        private bool _isCarnivore = false;
+        private bool _carnivore = false;
         private AnimalSize _size = AnimalSize.Small;
         private int _amount = 1;
 
@@ -38,7 +38,7 @@ namespace CircusTrainWPF
         {
             for (var i = 0; i < _amount; i++)
             {
-                var animal = new Animal(_isCarnivore, _size);
+                var animal = new Animal(_carnivore, _size);
                 _animals.Add(animal);
                 ListBoxAnimals.Items.Add(animal.ToString());
             }
@@ -46,12 +46,12 @@ namespace CircusTrainWPF
 
         private void CarnivoreCheckbox_Checked(object sender, RoutedEventArgs e)
         {
-            _isCarnivore = true;
+            _carnivore = true;
         }
 
         private void CarnivoreCheckbox_OnUnchecked(object sender, RoutedEventArgs e)
         {
-            _isCarnivore = false;
+            _carnivore = false;
         }
 
         private void AnimalSizeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -68,18 +68,18 @@ namespace CircusTrainWPF
                 _size = AnimalSize.Large;
         }
 
-        private void DistributeButton_Click(object sender, RoutedEventArgs e)
+        private void AssignButton_Click(object sender, RoutedEventArgs e)
         {
-            DistributeInfo.Items.Clear();
+            WagonInfo.Items.Clear();
 
             if (!_animals.Any()) return;
 
-            var distributor = new WagonDistributor(_animals);
-            distributor.Distribute();
-            var items = View(distributor);
+            var assing = new AssignWagon(_animals);
+            assing.assignWagon();
+            var items = View(assing);
 
             foreach (var item in items)
-                DistributeInfo.Items.Add(item);
+                WagonInfo.Items.Add(item);
         }
 
         private void AmountOfAnimals_TextChanged(object sender, TextChangedEventArgs e)
@@ -88,26 +88,26 @@ namespace CircusTrainWPF
                 _amount = Int32.Parse(AmountOfAnimals.Text);
         }
 
-        private List<String> View(WagonDistributor distributor)
+        private List<String> View(AssignWagon distributor)
         {
             var sb = new List<String>();
 
-            sb.Add("\n--- Wagon Distribution ---\n");
-            sb.Add("Total Amount of wagons: " + distributor.WagonList.Count);
-            sb.Add("----------------------------------------------------\n");
+            sb.Add("\n* Wagons *");
+            sb.Add("Total number of wagons: " + distributor.WagonList.Count);
+            sb.Add("\n****************************************************\n");
             for (var i = 0; i < distributor.WagonList.Count; i++)
             {
                 var wagon = distributor.WagonList[i];
                 var animals = wagon.Animals.ToList();
-                sb.Add("Wagon " + (i + 1) + ":\n\n" + animals.Count + " animals\n");
+                sb.Add("Wagon " + (i + 1) + "\nNumber of Animals in wagon: " + animals.Count);
+                sb.Add("Wagon points: " + wagon.Points + "\n");
                 for (var j = 0; j < animals.Count; j++)
                 {
                     var animal = animals[j];
                     sb.Add("Animal " + (j + 1) + " - " + animal);
                 }
 
-                sb.Add("---------------------------------------------------- +");
-                sb.Add("Total points: " + wagon.Points + "\n\n");
+                sb.Add("\n+++++++++++++++++++++++++++++++++++++++++++++++++\n");
             }
 
             return sb;
